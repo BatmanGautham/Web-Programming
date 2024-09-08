@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body style="text-align: center;">
+
+    <h1 style="font-size: 30px;">Factorial using JavaScript</h1>
+
+    <script>
+        num = parseInt(prompt('Enter a number : '))
+
+        if (isNaN(num) || num < 0) 
+            document.writeln("Please enter a valid non-negative integer next time!");
+
+
+        function fact(num)
+         {
+            if(num == 0)
+             {
+                return 1;
+             }
+            else
+             {
+                return num*fact(num-1)
+             }
+         }
+        
+        document.writeln("<h2>Factorial of ", num, " is ", fact(num), " </h2>");
+        
+    </script>
+
+
+    <script>
+        var num = parseInt(prompt("Enter another number: "));
+
+        if (isNaN(num) || num < 0) 
+         {
+            document.writeln("Please enter a valid non-negative integer.");
+         } 
+        else 
+         {
+            var i = num;
+            var pdt = 1;  
+
+            while (i != 0) 
+             {
+              pdt = pdt * i;
+              i = i - 1;
+             }
+
+             document.writeln("<h2>Factorial of number " + num + " is " + pdt + "</h2>");
+        }
+    </script>
+
+    
+</body>
+</html>

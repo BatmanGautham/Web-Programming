@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Text Replacement</title>
+</head>
+
+<body style="text-align: center;font-size: 36px;">
+
+    <p id="message">Welcome</p>
+    <button onclick="changeText()">Click</button> 
+
+    <script>
+
+        function changeText() 
+         {
+            var para = document.getElementById("message").innerHTML = "Hello from Javascript"; 
+         }
+
+    </script>
+
+</body>
+</html>

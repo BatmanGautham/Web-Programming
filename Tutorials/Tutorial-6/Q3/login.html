@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+
+</head>
+<body>
+
+    <h2>User Login</h2>
+    
+    <form name="loginForm" onsubmit="validateLogin(event)">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+
+    <script>
+        function validateLogin(event) 
+         {
+            var username = document.forms["loginForm"]["username"].value;
+            var password = document.forms["loginForm"]["password"].value;
+
+            if (username.trim() === "") 
+             {
+                alert("Username cannot be empty");
+                event.preventDefault();
+                return false;
+             }
+
+            if (password.trim() === "") 
+             {
+                alert("Password cannot be empty");
+                event.preventDefault();
+                return false;
+             }
+
+            return true;
+        }
+    </script>
+
+</body>
+</html>

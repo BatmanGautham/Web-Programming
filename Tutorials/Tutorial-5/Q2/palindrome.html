@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+</head>
+
+<body style="text-align: center;">
+
+    <h1>Palindrome or not? (Five Digit numbers only)</h1>
+
+    <script>
+        while(true)
+         {
+            var num = prompt("Enter a 5 digit number : ");
+
+            if(!isNaN(num) && num.length === 5)
+             {
+                break;
+             }
+            else
+             {
+                alert("Please enter a valid 5-digit number!")
+             }
+         }
+            
+        var rev = num.split('').reverse().join('');
+
+        if(num === rev)
+         {
+            document.writeln("<h2>Number "+num+" is a palindrome</h2>");
+         }
+        else
+         {
+            document.writeln("<h2>Number "+num+" is not a palindrome. </h2>");
+         }
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function calculateGrossPay(hoursWorked, hourlyRate) 
+         {
+            let grossPay = 0;
+
+            if (hoursWorked <= 40) 
+             {
+                grossPay = hoursWorked * hourlyRate;
+             } 
+            else 
+             {
+                grossPay = (40 * hourlyRate) + ((hoursWorked - 40) * hourlyRate * 1.5);
+             }
+            return grossPay;
+         }
+    
+        for (let i = 1; i <= 3; i++) 
+         {
+            let hours = parseFloat(prompt(`Enter the hours worked for Employee ${i}:`));
+            let rate = parseFloat(prompt(`Enter the hourly rate for Employee ${i}:`));
+    
+            if (isNaN(hours) || isNaN(rate) || hours < 0 || rate < 0)
+             {
+                alert("Please enter valid numbers for hours worked and hourly rate.");
+                i--; 
+             }
+            else 
+            {
+                let grossPay = calculateGrossPay(hours, rate);
+
+                document.writeln(`<h3>Employee ${i}'s Gross Pay: $${grossPay.toFixed(2)}</h3>`);
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>
